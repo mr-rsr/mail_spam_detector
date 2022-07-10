@@ -1,0 +1,132 @@
+html{
+    max-width: 100%;
+    max-width:100%;
+  }
+  * {
+      box-sizing: border-box;
+    }
+    .container{
+      margin:2% 8% 8% 8%;
+    }
+    H1{
+      margin-top: 20px;
+      text-align: center;
+      color: #04AA6D;
+    }
+    input[type=text], select, textarea {
+      width: 90%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      width: 140px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      margin-right:20%;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  .example{
+      margin: 10%;
+  }
+  .examp{
+    font-weight:bold;
+    font-size: 20px;
+  }
+  .exa{
+    font-size: 16px;
+  }
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+      .container{
+        margin: 0;
+      }
+      .examp{
+        font-size: 10px;
+      }
+      .exa{
+        font-size: 5px;
+      }
+    }
+  
+    .output {
+      height: content;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 29px;
+      font-weight: 300;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: red;
+      margin-top: 5px;
+      padding: 30px;
+  }
+  .output-not {
+    height: content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 29px;
+    font-weight: 300;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: green;
+    margin-top: 3px;
+    padding: 30px;
+  }
+  .output-logo {
+    height: 100px;
+    width: 100%;
+    margin-top:20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .output-logo img {
+    height: 100%;
+    width: 100px;
+  }

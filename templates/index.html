@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <title>
+            Mail Detection
+        </title>
+        <H1>Email Spam Detection</H1>
+    </head>
+    <body>
+        <div class="container">
+          <form action="/" method="post">
+            <div class="row">
+              <div class="col-25">
+                <label for="mail"><h4>Enter your mail here..</h4></label>
+              </div>
+              <div class="col-75">
+                <textarea class="text-box" id="sentence" name="message" onsubmit="return checkforblank()" placeholder="Write something.." style="height:100px"></textarea>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <input type="submit" class="btn" value="Submit">
+            </div>
+
+            <div class="example">
+                <div class="examp"><p>Some of the example of the mails are....</p></div>
+                <div class="exa">
+                <p>
+                    ham:-  "Go until jurong point, crazy.. Available only in bugis n great world la e buffet... Cine there got amore wat..."
+                </p>
+                <p>
+                    spam:- "FreeMsg Hey there darling it's been 3 week's now and no word back! I'd like some fun you up for it still? Tb ok! XxX std chgs to send, £1.50 to rcv"
+                </p>
+              </div>
+            </div>
+            <div class="containe">
+
+          <br>
+          {% if message %}
+          <div class="show-result">
+            <div class="output"><h3 style="color:black; font-size:22px; font-weight:bold; font-family:'Courier New', Courier, monospace; text-transform: uppercase;">{{message}}</h3></div>
+            <br>
+            {% if result=='This Message is Not a SPAM Message.' %}
+            <div class="output-logo">
+            <img src="{{url_for('static', filename='img/spam-2.png')}}">
+            </div>
+            {% endif %}
+            {% if result=='This Message is Not a SPAM Message.' %}
+            <div class="alert">
+            </div>
+            {% endif %}
+            {% if result=='This Message is a SPAM Message.' %}
+            <div class="output-logo">
+            <img src="{{url_for('static', filename='img/spam.png')}}">
+            </div>
+            {% endif %}
+            {% if result=='This Message is Not a SPAM Message.' %}
+            <div class="output-not">{{result}}</div>
+            {% endif %}
+            {% if result=='This Message is a SPAM Message.' %}
+            <div class="output">{{result}}</div>
+            {% endif %}
+            {% if result=='This Message is a SPAM Message.' %}
+            <div class="alert">
+            </div>
+            {% endif %}
+         </div>
+          {% else %}
+          {% endif %}
+            </form>
+          </div>
+    </body>
+</html>
